@@ -1,0 +1,38 @@
+# Skrip Konfigurasi Jellyfin Dengan Nginx Reverse Proxy
+
+        # Jellyfin hosted on http(s)://DOMAIN_NAME/jellyfin
+    
+    server {
+        listen 80;
+        listen [::]:80;
+        server_name NAMA_DOMAIN_ANDA;
+        # You can specify multiple domain names if you want
+        
+        # Uncomment and create directory to also host static content
+        #root /srv/http/media;
+        index index.html;
+        
+        location / {
+            # Proxy main Jellyfin traffic
+            # The / at the end is significant.
+            # https://www.acunetix.com/blog/articles/a-fresh-look-on-reverse-proxy-related-attacks/
+    
+            proxy_pass http://localhost:8096/;
+    
+            proxy_pass_request_headers on;
+    
+            proxy_set_header Host $host;
+    
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+            proxy_set_header X-Forwarded-Host $http_host;
+    
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection $http_connection;
+    
+            # Disable buffering when the nginx proxy gets very resource heavy upon streaming
+            proxy_buffering off;
+        }
+    }
+
