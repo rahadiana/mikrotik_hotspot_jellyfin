@@ -1,9 +1,9 @@
-﻿
+
 # mikrotik hotspot jellyfin
 Script integrasi jellyfin dan mikrotik hotspot, Dengan Script Ini Anda Dapat Menambahkan User Mikrotik Yang Sama Dengan User Pada Jellyfin Dengan Otomatis. 
 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-AjP_Egjsos" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe src="https://www.youtube.com/embed/-AjP_Egjsos" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # Setting Jellyfin Dengan Nginx Reverse Proxy
 
@@ -31,4 +31,3 @@ https://www.youtube.com/playlist?list=PLqtv1GVajB2qyZwvHiXN7vEJc-SL2idIa
 
 Cara Optimalisasi Web Server Nginx :
 https://youtu.be/Arkio-8T3W8
-
