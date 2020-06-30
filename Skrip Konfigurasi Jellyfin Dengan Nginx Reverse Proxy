@@ -5,7 +5,7 @@
     server {
         listen 80;
         listen [::]:80;
-        server_name NAMA_DOMAIN_ANDA;
+        server_name NAMA_DOMAIN_ANDA; #GANTI NAMA DOMAIN ANDA
         # You can specify multiple domain names if you want
         
         # Uncomment and create directory to also host static content
